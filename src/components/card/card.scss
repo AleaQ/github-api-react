@@ -55,9 +55,13 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   background: #e8e8e8;
-  border-top: 1px solid rgb(243, 118, 133);
+  border-top: 2px solid rgb(243, 118, 133);
   grid-area: footer;
   justify-content: center;
-  grid-gap: 10px;
+  grid-column-gap: 10px;
   height: 75px;
+}
+
+.card-button {
+  grid-row: 2 / auto;
 }
