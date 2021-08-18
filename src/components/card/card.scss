@@ -2,7 +2,7 @@
   display: grid;
   height: auto;
   border-radius: 5px;
-  border: 1px solid rgb(243, 118, 133);
+  box-shadow: 5px 6px 11px 0px #999999;
   grid-template-areas:
     "header header"
     "body body"
@@ -54,14 +54,34 @@
 .card-footer {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  background: #e8e8e8;
+  background: #e0e0e0;
   border-top: 2px solid rgb(243, 118, 133);
   grid-area: footer;
   justify-content: center;
   grid-column-gap: 10px;
-  height: 75px;
+  height: 100px;
 }
 
 .card-button {
   grid-row: 2 / auto;
+
+  button {
+    width: 89px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #e7e7e7;
+    box-shadow: 5px 5px 13px #cccccc, -5px -5px 13px #f4f4f4;
+    border-radius: 8px;
+    svg {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 12px;
+    }
+
+    &:hover {
+      color: white;
+      background: black;
+      transition: 0.1s;
+    }
+  }
 }
