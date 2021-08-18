@@ -60,10 +60,11 @@ function App() {
               <Card
                 name={item.name}
                 image={item.owner.avatar_url}
-                url={item.owner.url}
+                url={item.owner.html_url}
                 starCount={item.stargazers_count}
                 desc={item.description}
                 commitUrl={item.commits_url}
+                fullName={item.full_name}
               />
             </div>
           ))}

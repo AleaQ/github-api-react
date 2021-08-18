@@ -9,7 +9,18 @@ import Truncate from "react-truncate";
 
 library.add(fab);
 
-const name = (props) => {
+const Card = (props) => {
+  const getCommits = () => {
+    const commitInfo = props.fullName;
+    const commitUrl = "https://api.github.com/repos/" + commitInfo + "/commits";
+    window.open(commitUrl, "_blank");
+  };
+
+  const getStars = () => {
+    const commitInfo = props.fullName;
+    const commitUrl = "https://api.github.com/repos/" + commitInfo + "/stargazers";
+    window.open(commitUrl, "_blank");
+  };
   return (
     <div className="card-container">
       <div className="card-header">
@@ -25,20 +36,20 @@ const name = (props) => {
       </div>
       <div className="card-footer">
         <div className="card-button">
-          <button>
+          <button onClick={() => window.open(props.url, "_blank")}>
             <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
             Github page
           </button>
         </div>
         <div className="card-button">
           <button>
-            <FontAwesomeIcon icon={faCodeBranch} size="2x" />
+            <FontAwesomeIcon icon={faStar} size="2x" onClick={getStars} />
             {props.starCount} Stars
           </button>
         </div>
         <div className="card-button">
           <button>
-            <FontAwesomeIcon icon={faStar} size="2x" />
+            <FontAwesomeIcon icon={faCodeBranch} size="2x" onClick={getCommits} />
             Commits
           </button>
         </div>
@@ -47,4 +58,4 @@ const name = (props) => {
   );
 };
 
-export default name;
+export default Card;
