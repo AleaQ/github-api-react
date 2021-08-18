@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-grid {
+  flex: 0 32%;
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.App {
+  padding: 3% 10%;
+}
