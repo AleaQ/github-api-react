@@ -7,7 +7,7 @@ function App() {
   const [repo, setRepoData] = useState([]);
 
   const gitHubUrl =
-    "https://api.github.com/search/repositories?q=language:javascript&sort=stars&order=desc&page=1&per_page=100";
+    "https://api.github.com/search/repositories?q=sort=stars&order=desc&per_page=100";
 
   const getApiData = async () => {
     // try {
@@ -22,31 +22,23 @@ function App() {
   useEffect(() => {
     getApiData();
   }, []);
+
   return (
     <div className="App">
       <main>
-        <div className="card-grid">
-          <Card />
-        </div>
-
-        <div className="card-grid">
-          <Card />
-        </div>
-        <div className="card-grid">
-          <Card />
-        </div>
+        {repo.map((item, index) => (
+          <div className="card-grid" key={index}>
+            <Card
+              name={item.name}
+              image={item.owner.avatar_url}
+              url={item.owner.url}
+              starCount={item.stargazers_count}
+              desc={item.description}
+              commitUrl={item.commits_url}
+            />
+          </div>
+        ))}
       </main>
-
-      {/* {repo.map((item) => (
-        <Card
-          name={item.name}
-          image={item.owner.avatar_url}
-          url={item.owner.url}
-          starCount={item.stargazers_count}
-          desc={item.description}
-          commitUrl={item.commits_url}
-        />
-      ))} */}
     </div>
   );
 }

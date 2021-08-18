@@ -8,34 +8,32 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab);
 
-const name = (image, name, url, starCount, desc, commitUrl) => {
+const name = (props) => {
   return (
     <div className="card-container">
       <div className="card-header">
         <div className="card-img">
-          <img src="https://avatars.githubusercontent.com/u/9892522?v=4" alt="placeholder" />
+          <img src={props.image} alt="avatar" />
         </div>
       </div>
       <div className="card-body">
-        <p className="card-title">freecode camp</p>
-        <p className="card-desc">
-          freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.
-        </p>
+        <p className="card-title">{props.name}</p>
+        <p className="card-desc">{props.desc}</p>
       </div>
       <div className="card-footer">
-        <div class="card-button">
+        <div className="card-button">
           <button>
             <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
             Github page
           </button>
         </div>
-        <div class="card-button">
+        <div className="card-button">
           <button>
             <FontAwesomeIcon icon={faCodeBranch} size="2x" />
-            6000 Stars
+            {props.starCount} Stars
           </button>
         </div>
-        <div class="card-button">
+        <div className="card-button">
           <button>
             <FontAwesomeIcon icon={faStar} size="2x" />
             Commits

@@ -42,11 +42,16 @@
   margin-top: 25px;
   padding: 0 15px;
   height: auto;
+  width: auto;
 
   .card-title {
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
+    word-break: break-word;
+  }
+  .card-desc {
+    word-break: break-word;
   }
 }
 
