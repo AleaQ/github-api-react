@@ -2,6 +2,7 @@ main {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 2rem 2.5rem;
 }
 
 .card-grid {
@@ -10,12 +11,28 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.App {
-  padding: 2rem 2.5rem;
-}
-
 @media (max-width: 768px) {
   main {
     justify-content: center;
+  }
+}
+
+.svgLoader {
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+.divLoader {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

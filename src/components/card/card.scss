@@ -41,7 +41,7 @@
   grid-area: body;
   margin-top: 25px;
   padding: 0 15px;
-  height: auto;
+  height: 200px;
   width: auto;
 
   .card-title {
@@ -52,6 +52,7 @@
   }
   .card-desc {
     word-break: break-word;
+    height: max-content;
   }
 }
 

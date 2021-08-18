@@ -5,6 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCodeBranch } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Truncate from "react-truncate";
 
 library.add(fab);
 
@@ -18,7 +19,9 @@ const name = (props) => {
       </div>
       <div className="card-body">
         <p className="card-title">{props.name}</p>
-        <p className="card-desc">{props.desc}</p>
+        <Truncate ellipsis="..." lines={3}>
+          <p className="card-desc">{props.desc}</p>
+        </Truncate>
       </div>
       <div className="card-footer">
         <div className="card-button">
