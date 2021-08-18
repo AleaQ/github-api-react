@@ -1,15 +1,21 @@
 main {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .card-grid {
-  flex: 0 32%;
-  height: 100px;
-  margin-bottom: 2%;
+  flex: 0 30%;
+  height: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .App {
-  padding: 3% 10%;
+  padding: 2rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    justify-content: center;
+  }
 }

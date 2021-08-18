@@ -1,7 +1,6 @@
 .card-container {
   display: grid;
   height: auto;
-  border-radius: 5px;
   box-shadow: 5px 6px 11px 0px #999999;
   grid-template-areas:
     "header header"
@@ -16,7 +15,7 @@
     rgba(243, 118, 133, 1) 0%,
     rgba(245, 157, 112, 1) 49%,
     rgba(246, 174, 100, 1) 80%,
-    rgba(247, 187, 90, 1) 99%
+    rgba(247, 187, 90, 1) 100%
   );
   display: flex;
   justify-content: center;
@@ -57,9 +56,10 @@
   background: #e0e0e0;
   border-top: 2px solid rgb(243, 118, 133);
   grid-area: footer;
-  justify-content: center;
-  grid-column-gap: 10px;
+  justify-content: space-around;
+  grid-column-gap: 8px;
   height: 100px;
+  padding: 0 15px;
 }
 
 .card-button {
