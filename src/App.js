@@ -4,8 +4,8 @@ import axios from "axios";
 import Card from "./components/card/card";
 
 const Loader = () => (
-  <div class="divLoader">
-    <svg class="svgLoader" viewBox="0 0 100 100" width="10em" height="10em">
+  <div className="divLoader">
+    <svg className="svgLoader" viewBox="0 0 100 100" width="10em" height="10em">
       <path
         stroke="none"
         d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50"
@@ -30,9 +30,8 @@ const Loader = () => (
 function App() {
   const [repo, setRepoData] = useState([]);
   const [isLoading, setLoading] = useState(true);
-
   const gitHubUrl =
-    "https://api.github.com/search/repositories?q=sort=stars&order=desc&per_page=100";
+    "https://api.github.com/search/repositories?q=sort=stars&per_page=100&order=desc";
 
   const getApiData = async () => {
     try {
