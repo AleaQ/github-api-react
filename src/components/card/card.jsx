@@ -10,12 +10,13 @@ import Truncate from "react-truncate";
 library.add(fab);
 
 const Card = (props) => {
+  // open list of commits in new window
   const getCommits = () => {
     const commitInfo = props.fullName;
     const commitUrl = "https://api.github.com/repos/" + commitInfo + "/commits";
     window.open(commitUrl, "_blank");
   };
-
+  // open list of stargazers in new window
   const getStars = () => {
     const commitInfo = props.fullName;
     const commitUrl = "https://api.github.com/repos/" + commitInfo + "/stargazers";
