@@ -36,15 +36,15 @@ function App() {
     "https://api.github.com/search/repositories?q=sort=stars&per_page=100&order=desc";
 
   const getApiData = async () => {
-    // try {
-    //   const response = await axios.get(gitHubUrl);
-    //   // attach data to state
-    //   setRepoData(response.data.items);
-    //   // set to false when data loads
-    //   setLoading(false);
-    // } catch (error) {
-    //   console.log("api error", error);
-    // }
+    try {
+      const response = await axios.get(gitHubUrl);
+      // attach data to state
+      setRepoData(response.data.items);
+      // set to false when data loads
+      setLoading(false);
+    } catch (error) {
+      console.log("api error", error);
+    }
   };
   // load data when page is mounted
   useEffect(() => {
